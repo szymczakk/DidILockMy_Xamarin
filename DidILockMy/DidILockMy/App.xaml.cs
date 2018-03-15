@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Autofac;
+using Autofac.Core;
 using Xamarin.Forms;
 
 namespace DidILockMy
 {
 	public partial class App : Application
 	{
-		public App ()
+        private static IContainer _container;
+
+        public App ()
 		{
 			InitializeComponent();
 
@@ -30,5 +33,21 @@ namespace DidILockMy
 		{
 			// Handle when your app resumes
 		}
-	}
+
+        private static void PrepareContainer(IModule[] platformSpecificModules)
+        {
+            var containerBuilder = new Autofac.ContainerBuilder();
+            RegisterPlatformSpecificModules(platformSpecificModules, containerBuilder);
+            containerBuilder.RegisterType<TrackingsDatabase>().SingleInstance();
+            _container = containerBuilder.Build();
+        }
+
+        private static void RegisterPlatformSpecificModules(IModule[] platformSpecificModules, ContainerBuilder containerBuilder)
+        {
+            foreach (var platformSpecificModule in platformSpecificModules)
+            {
+                containerBuilder.RegisterModule(platformSpecificModule);
+            }
+        }
+    }
 }

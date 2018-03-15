@@ -50,11 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Autofac">
+      <Version>4.6.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>1.5.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
       <Version>1.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.4.118</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
@@ -64,7 +70,9 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="25.4.0.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutofacModule.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Providers\LocalFilePathProvider.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +97,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DidILockMy.Contracts\DidILockMy.Contracts.csproj">
+      <Project>{bcf8b483-7a62-4678-b91c-739c9a0897df}</Project>
+      <Name>DidILockMy.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DidILockMy\DidILockMy.csproj">
       <Project>{E4ACF51E-D633-4988-8494-39EB29EB19E6}</Project>
       <Name>DidILockMy</Name>
