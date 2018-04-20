@@ -38,7 +38,7 @@ namespace DidILockMy
         {
             var containerBuilder = new Autofac.ContainerBuilder();
             RegisterPlatformSpecificModules(platformSpecificModules, containerBuilder);
-            containerBuilder.RegisterType<TrackingsDatabase>().SingleInstance();
+           // containerBuilder.RegisterType<TrackingsDatabase>().SingleInstance();
             _container = containerBuilder.Build();
         }
 

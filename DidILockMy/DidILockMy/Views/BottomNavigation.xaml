@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DidILockMy.Views.BottomNavigation"
+             HeightRequest="55"
+             MinimumHeightRequest="55">
+  <ContentView.Content>
+        <RelativeLayout>
+            <BoxView Color="Red" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0 }"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0 }"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Text="M1" Grid.Column="0" Grid.Row="0"/>
+                <Button Text="M2" Grid.Column="1" Grid.Row="0"/>
+                <Button Text="M3" Grid.Column="2" Grid.Row="0"/>
+                <Button Text="M4" Grid.Column="3" Grid.Row="0"/>
+            </Grid>
+        </RelativeLayout>
+    </ContentView.Content>
+</ContentView>

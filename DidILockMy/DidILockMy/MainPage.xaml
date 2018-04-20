@@ -2,10 +2,66 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DidILockMy"
-             x:Class="DidILockMy.MainPage">
-
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+             xmlns:views="clr-namespace:DidILockMy.Views"
+             x:Class="DidILockMy.MainPage"
+             BackgroundColor="#ECECEC">
+    <RelativeLayout>
+        <Frame
+            BackgroundColor="#82DAE6"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=2,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0.4,
+                             Constant=0}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=-0.2,
+                             Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=-.5,
+                             Constant=0}"
+            CornerRadius="800">
+        </Frame>
+        <ContentView Padding="0, 30" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}">
+            <Label Text="MY LOCKS" XAlign="Center" FontSize="Large"></Label>
+        </ContentView>
+        <Grid ColumnSpacing="30" RowSpacing="30" HorizontalOptions="Center"
+              RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.05,
+                             Constant=0}"
+              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0.13,
+                             Constant=0}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+            <views:LockView Grid.Row="0" Grid.Column="0"></views:LockView>
+            <views:LockView Grid.Row="0" Grid.Column="1"></views:LockView>
+            <views:LockView Grid.Row="1" Grid.Column="0"></views:LockView>
+            <views:LockView Grid.Row="1" Grid.Column="1"></views:LockView>
+        </Grid>
+        <views:BottomNavigation 
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=-55}"></views:BottomNavigation>
+    </RelativeLayout>
 </ContentPage>
