@@ -29,6 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\AddLockView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\BottomNavigation.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

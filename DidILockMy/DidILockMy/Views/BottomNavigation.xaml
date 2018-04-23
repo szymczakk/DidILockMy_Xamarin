@@ -3,17 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DidILockMy.Views.BottomNavigation"
              HeightRequest="55"
-             MinimumHeightRequest="55">
+             MinimumHeightRequest="55"
+             BackgroundColor="White">
   <ContentView.Content>
         <RelativeLayout>
-            <BoxView Color="Red" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=1,
-                             Constant=0 }"
-                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                             Property=Height,
-                             Factor=1,
-                             Constant=0 }"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="55"/>
@@ -24,10 +17,10 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Text="M1" Grid.Column="0" Grid.Row="0"/>
-                <Button Text="M2" Grid.Column="1" Grid.Row="0"/>
-                <Button Text="M3" Grid.Column="2" Grid.Row="0"/>
-                <Button Text="M4" Grid.Column="3" Grid.Row="0"/>
+                <Button x:Name="notificationBtn" Text="Not" Grid.Column="0" Grid.Row="0"/>
+                <Button x:Name="editBtn" Text="Edit" Grid.Column="1" Grid.Row="0"/>
+                <Button x:Name="deleteBtn" Text="Delete" Grid.Column="2" Grid.Row="0"/>
+                <Button x:Name="settingsBtn" Text="Setting" Grid.Column="3" Grid.Row="0"/>
             </Grid>
         </RelativeLayout>
     </ContentView.Content>

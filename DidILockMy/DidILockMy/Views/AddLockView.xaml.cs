@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace DidILockMy.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class BottomNavigation : ContentView
+	public partial class AddLockView : ContentView
 	{
-		public BottomNavigation ()
+		public AddLockView ()
 		{
 			InitializeComponent ();
 		}
-    }
+	}
 }

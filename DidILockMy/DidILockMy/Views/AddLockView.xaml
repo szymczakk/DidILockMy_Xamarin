@@ -1,24 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DidILockMy.Views.LockView"
+             x:Class="DidILockMy.Views.AddLockView"
              HeightRequest="150" 
              WidthRequest="150" 
              MinimumHeightRequest="150" 
              MinimumWidthRequest="150"
-             BackgroundColor="White">
-  <ContentView.Content>
+             BackgroundColor="#223E4C">
+    <ContentView.Content>
         <RelativeLayout>
             <ContentView 
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                     Property=Height,Factor=1,Constant=0}" 
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                     Property=Width, Factor=1,Constant=0}">
-                <Label TextColor="Black" 
-                       Text="Lock" 
+                <Label TextColor="#BAC5C7" 
+                       Text="Add Lock" 
                        VerticalTextAlignment="Center" 
-                       HorizontalTextAlignment="Center"/>
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="15"/>
             </ContentView>
         </RelativeLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

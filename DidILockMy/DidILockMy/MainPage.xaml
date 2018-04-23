@@ -30,7 +30,7 @@
                              Property=Width,
                              Factor=1,
                              Constant=0}">
-            <Label Text="MY LOCKS" XAlign="Center" FontSize="Large"></Label>
+            <Label Text="MY LOCKS" XAlign="Center" FontSize="20"></Label>
         </ContentView>
         <Grid ColumnSpacing="30" RowSpacing="30" HorizontalOptions="Center"
               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -44,6 +44,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="150" />
                 <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150" />
@@ -52,7 +53,7 @@
             <views:LockView Grid.Row="0" Grid.Column="0"></views:LockView>
             <views:LockView Grid.Row="0" Grid.Column="1"></views:LockView>
             <views:LockView Grid.Row="1" Grid.Column="0"></views:LockView>
-            <views:LockView Grid.Row="1" Grid.Column="1"></views:LockView>
+            <views:AddLockView Grid.Row="1" Grid.Column="1"></views:AddLockView>
         </Grid>
         <views:BottomNavigation 
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
